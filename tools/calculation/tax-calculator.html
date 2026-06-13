@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>消費税計算 | 便利ツール集</title>
+  <meta name="description" content="税抜・税込の相互変換ができる無料の消費税計算ツール。8%・10%の税率に対応。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="便利ツール集">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <div class="container">
+      <div id="breadcrumb"></div>
+      <article class="tool-page">
+        <header class="tool-header">
+          <h1 class="tool-title">消費税計算</h1>
+          <p class="tool-description">税抜価格と税込価格を相互に計算します。軽減税率8%・標準税率10%に対応。</p>
+        </header>
+        <div class="tool-panel">
+          <div class="form-group">
+            <span class="form-label">税率</span>
+            <div class="option-group" id="tax-rate-options">
+              <label class="option-btn"><input type="radio" name="tax-rate" value="8">8%（軽減税率）</label>
+              <label class="option-btn is-active"><input type="radio" name="tax-rate" value="10" checked>10%（標準税率）</label>
+            </div>
+          </div>
+
+          <div class="tab-group" role="tablist">
+            <button class="tab-btn is-active" data-tab="excl-to-incl" role="tab">税抜 → 税込</button>
+            <button class="tab-btn" data-tab="incl-to-excl" role="tab">税込 → 税抜</button>
+          </div>
+
+          <div class="tab-panel is-active" id="tab-excl-to-incl">
+            <div class="form-group">
+              <label class="form-label" for="amount-excl">税抜金額（円）</label>
+              <input type="number" id="amount-excl" class="form-input" min="0" placeholder="例：1000">
+            </div>
+          </div>
+          <div class="tab-panel" id="tab-incl-to-excl">
+            <div class="form-group">
+              <label class="form-label" for="amount-incl">税込金額（円）</label>
+              <input type="number" id="amount-incl" class="form-input" min="0" placeholder="例：1100">
+            </div>
+          </div>
+
+          <div id="result" class="result-box" hidden>
+            <div class="result-grid">
+              <div class="result-item">
+                <p class="result-item-label">税抜金額</p>
+                <p class="result-item-value" id="result-excl">—</p>
+              </div>
+              <div class="result-item">
+                <p class="result-item-label">消費税額</p>
+                <p class="result-item-value" id="result-tax">—</p>
+              </div>
+              <div class="result-item">
+                <p class="result-item-label">税込金額</p>
+                <p class="result-item-value" id="result-incl">—</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+    <script src="/js/config.js"></script>
+  <script src="/js/categories.js"></script>
+  <script src="/js/tools-registry.js"></script>
+  <script src="/js/tools-content.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/tools/tax-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>割り勘計算 | 便利ツール集</title>
+  <meta name="description" content="合計金額と人数から1人あたりの金額を計算。端数切り上げ・切り捨てに対応した無料の割り勘計算ツール。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="便利ツール集">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <div class="container">
+      <div id="breadcrumb"></div>
+      <article class="tool-page">
+        <header class="tool-header">
+          <h1 class="tool-title">割り勘計算</h1>
+          <p class="tool-description">合計金額と人数から1人あたりの金額を計算します。端数の処理方法も選べます。</p>
+        </header>
+        <div class="tool-panel">
+          <div class="form-group">
+            <label class="form-label" for="total">合計金額（円）</label>
+            <input type="number" id="total" class="form-input" min="0" placeholder="例：12500">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="people">人数</label>
+            <input type="number" id="people" class="form-input" min="1" step="1" placeholder="例：4">
+          </div>
+          <div class="form-group">
+            <span class="form-label">端数処理</span>
+            <div class="option-group" id="rounding-options">
+              <label class="option-btn is-active"><input type="radio" name="rounding" value="round" checked>四捨五入</label>
+              <label class="option-btn"><input type="radio" name="rounding" value="ceil">切り上げ</label>
+              <label class="option-btn"><input type="radio" name="rounding" value="floor">切り捨て</label>
+            </div>
+          </div>
+          <div id="result" class="result-box" hidden>
+            <p class="result-label">1人あたり</p>
+            <p class="result-value" id="result-per-person">—</p>
+            <p class="result-sub" id="result-sub"></p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+    <script src="/js/config.js"></script>
+  <script src="/js/categories.js"></script>
+  <script src="/js/tools-registry.js"></script>
+  <script src="/js/tools-content.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/tools/split-bill.js"></script>
+</body>
+</html>

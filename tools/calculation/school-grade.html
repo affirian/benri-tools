@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学年計算 | 便利ツール集</title>
+  <meta name="description" content="生年月日から現在の学校学年を判定する無料ツール。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="便利ツール集">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <script src="/js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <div class="container">
+      <div id="breadcrumb"></div>
+      <article class="tool-page">
+        <header class="tool-header">
+          <h1 class="tool-title">学年計算</h1>
+          <p class="tool-description">生年月日から現在の学校学年を判定する無料ツール。</p>
+        </header>
+        <div class="tool-panel">
+          <div class="form-group">
+            <label class="form-label" for="birth-date">生年月日</label>
+            <input type="date" id="birth-date" class="form-input">
+          </div>
+          <div id="result" class="result-box" hidden>
+            <p class="result-label">現在の学年</p>
+            <p class="result-value" id="result-grade">—</p>
+            <p class="result-sub" id="result-detail"></p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/config.js"></script>
+  <script src="/js/categories.js"></script>
+  <script src="/js/tools-registry.js"></script>
+  <script src="/js/tools-content.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/tools/school-grade.js"></script>
+</body>
+</html>

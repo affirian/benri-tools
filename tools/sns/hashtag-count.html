@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ハッシュタグ数カウント | 便利ツール集</title>
+  <meta name="description" content="テキスト内のハッシュタグ（#）の数をカウントする無料ツール。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="便利ツール集">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <script src="/js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <div class="container">
+      <div id="breadcrumb"></div>
+      <article class="tool-page">
+        <header class="tool-header">
+          <h1 class="tool-title">ハッシュタグ数カウント</h1>
+          <p class="tool-description">テキスト内のハッシュタグ（#）の数をカウントする無料ツール。</p>
+        </header>
+        <div class="tool-panel">
+          <div class="form-group">
+            <label class="form-label" for="text">テキスト</label>
+            <textarea id="text" class="form-textarea" rows="6" placeholder="#旅行 #カフェ #日常"></textarea>
+            <p class="char-stats">ハッシュタグ数: <strong id="tag-count">0</strong></p>
+            <div id="tag-list" class="tag-list"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/config.js"></script>
+  <script src="/js/categories.js"></script>
+  <script src="/js/tools-registry.js"></script>
+  <script src="/js/tools-content.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/tools/hashtag-count.js"></script>
+</body>
+</html>

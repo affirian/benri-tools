@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日数計算 | 便利ツール集</title>
+  <meta name="description" content="開始日と終了日から日数を計算。○年○ヶ月○日の表示にも対応した無料の日数計算ツール。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="便利ツール集">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <div class="container">
+      <div id="breadcrumb"></div>
+      <article class="tool-page">
+        <header class="tool-header">
+          <h1 class="tool-title">日数計算</h1>
+          <p class="tool-description">開始日と終了日を入力すると、日数と年・月・日での期間を計算します。</p>
+        </header>
+        <div class="tool-panel">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="start-date">開始日</label>
+              <input type="date" id="start-date" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="end-date">終了日</label>
+              <input type="date" id="end-date" class="form-input">
+            </div>
+          </div>
+          <div id="result" class="result-box" hidden>
+            <p class="result-label">日数</p>
+            <p class="result-value" id="result-days">—</p>
+            <p class="result-sub" id="result-ymd"></p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+    <script src="/js/config.js"></script>
+  <script src="/js/categories.js"></script>
+  <script src="/js/tools-registry.js"></script>
+  <script src="/js/tools-content.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/tools/days-calculator.js"></script>
+</body>
+</html>

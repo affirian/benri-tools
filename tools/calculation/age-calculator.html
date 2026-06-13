@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年齢計算 | 便利ツール集</title>
+  <meta name="description" content="生年月日から現在の年齢と生後日数を計算する無料ツール。満年齢の年・月・日も表示。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="便利ツール集">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <div class="container">
+      <div id="breadcrumb"></div>
+      <article class="tool-page">
+        <header class="tool-header">
+          <h1 class="tool-title">年齢計算</h1>
+          <p class="tool-description">生年月日を入力すると、現在の年齢と生後日数を計算します。</p>
+        </header>
+        <div class="tool-panel">
+          <div class="form-group">
+            <label class="form-label" for="birth-date">生年月日</label>
+            <input type="date" id="birth-date" class="form-input">
+          </div>
+          <div id="result" class="result-box" hidden>
+            <p class="result-label">現在の年齢</p>
+            <p class="result-value" id="result-age">—</p>
+            <div class="result-grid">
+              <div class="result-item">
+                <p class="result-item-label">満年齢（詳細）</p>
+                <p class="result-item-value" id="result-detail">—</p>
+              </div>
+              <div class="result-item">
+                <p class="result-item-label">生後日数</p>
+                <p class="result-item-value" id="result-days">—</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+    <script src="/js/config.js"></script>
+  <script src="/js/categories.js"></script>
+  <script src="/js/tools-registry.js"></script>
+  <script src="/js/tools-content.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/tools/age-calculator.js"></script>
+</body>
+</html>

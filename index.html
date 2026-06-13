@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>便利ツール集 | 無料で使える便利ツール</title>
+  <meta name="description" content="日数計算・年齢計算・割り勘・消費税・QRコード生成など、ブラウザだけで完結する無料の便利ツール集。登録不要・高速・スマホ対応。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://benri-tools.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="便利ツール集">
+  <meta property="og:title" content="便利ツール集 | 無料で使える便利ツール">
+  <meta property="og:description" content="日数計算・年齢計算・割り勘・消費税・QRコード生成など、ブラウザだけで完結する無料の便利ツール集。">
+  <meta property="og:url" content="https://benri-tools.pages.dev/">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <script src="/js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="site-main">
+    <div class="container">
+      <section class="hero">
+        <h1 class="hero-title">便利ツール集</h1>
+        <p class="hero-desc">計算・SNS・QRコードなど、ブラウザだけで完結する無料ツール。登録不要・高速・スマホ対応。</p>
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="search" id="tool-search" class="search-input" placeholder="ツールを検索（例：消費税、QR、年齢）" autocomplete="off" aria-label="ツール検索">
+        </div>
+      </section>
+
+      <div id="ad-top"></div>
+      <div id="search-empty" class="search-empty" hidden>
+        <p>該当するツールが見つかりませんでした。</p>
+        <p>別のキーワードで検索してみてください。</p>
+      </div>
+
+      <div id="featured-sections"></div>
+      <div id="tools-container"></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/categories.js"></script>
+  <script src="/js/tools-registry.js"></script>
+  <script src="/js/tools-content.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/components.js"></script>
+  <script>Components.mount('#ad-top', Components.renderAdSlot('top'));</script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ローン返済計算 | 便利ツール集</title>
+  <meta name="description" content="借入額・金利・返済期間から毎月の返済額を計算する無料ツール。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="便利ツール集">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <script src="/js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <div class="container">
+      <div id="breadcrumb"></div>
+      <article class="tool-page">
+        <header class="tool-header">
+          <h1 class="tool-title">ローン返済計算</h1>
+          <p class="tool-description">借入額・金利・返済期間から毎月の返済額を計算する無料ツール。</p>
+        </header>
+        <div class="tool-panel">
+          <div class="form-group">
+            <label class="form-label" for="principal">借入額（円）</label>
+            <input type="number" id="principal" class="form-input" min="0" placeholder="例：30000000">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="rate">年利（%）</label>
+              <input type="number" id="rate" class="form-input" min="0" step="0.01" placeholder="例：1.5">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="years">返済年数</label>
+              <input type="number" id="years" class="form-input" min="1" placeholder="例：35">
+            </div>
+          </div>
+          <div id="result" class="result-box" hidden>
+            <div class="result-grid">
+              <div class="result-item">
+                <p class="result-item-label">毎月の返済額</p>
+                <p class="result-item-value" id="result-monthly">—</p>
+              </div>
+              <div class="result-item">
+                <p class="result-item-label">総返済額</p>
+                <p class="result-item-value" id="result-total">—</p>
+              </div>
+              <div class="result-item">
+                <p class="result-item-label">総利息</p>
+                <p class="result-item-value" id="result-interest">—</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/config.js"></script>
+  <script src="/js/categories.js"></script>
+  <script src="/js/tools-registry.js"></script>
+  <script src="/js/tools-content.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/tools/loan-calculator.js"></script>
+</body>
+</html>
