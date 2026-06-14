@@ -8,6 +8,12 @@
   const outputEl = document.getElementById('qr-output');
   const qrcodeEl = document.getElementById('qrcode');
 
+  function getQrSize() {
+    const panel = qrcodeEl.closest('.tool-panel');
+    const base = qrcodeEl.clientWidth || (panel ? panel.clientWidth - 48 : 240);
+    return Math.min(256, Math.max(160, base - 32));
+  }
+
   function generate() {
     const text = textEl.value.trim();
     if (!text) {
@@ -22,10 +28,11 @@
     requestAnimationFrame(() => {
       setTimeout(() => {
         qrcodeEl.innerHTML = '';
+        const size = getQrSize();
         new QRCode(qrcodeEl, {
           text,
-          width: 256,
-          height: 256,
+          width: size,
+          height: size,
           colorDark: document.documentElement.dataset.theme === 'dark' ? '#f1f5f9' : '#0f172a',
           colorLight: document.documentElement.dataset.theme === 'dark' ? '#1e293b' : '#ffffff',
           correctLevel: QRCode.CorrectLevel.M,

@@ -54,9 +54,9 @@
 
 .header-search-wrap {
   position: relative;
-  flex: 1;
+  flex: 1 1 auto;
   max-width: 320px;
-  min-width: 140px;
+  min-width: 0;
 }
 
 .header-search-input {
@@ -279,6 +279,7 @@
 /* ── Search ── */
 .search-box {
   position: relative;
+  width: 100%;
   max-width: 28rem;
   margin: 0 auto;
 }
@@ -351,8 +352,9 @@
 /* ── Tool Cards Grid ── */
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   gap: 1rem;
+  width: 100%;
 }
 
 .tool-card {
@@ -507,6 +509,7 @@
 
 /* ── Tool Page ── */
 .tool-page {
+  width: 100%;
   max-width: 40rem;
   margin: 0 auto;
 }
@@ -545,50 +548,4 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-}
-
-/* ── Responsive ── */
-@media (max-width: 640px) {
-  .site-main {
-    padding: 1.5rem 0 2rem;
-  }
-
-  .hero {
-    padding: 1.25rem 0 2rem;
-  }
-
-  .header-inner {
-    flex-wrap: wrap;
-  }
-
-  .header-search-wrap {
-    order: 3;
-    flex: 1 1 100%;
-    max-width: none;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .tool-panel {
-    padding: 1.25rem;
-  }
-
-  .tool-card {
-    padding: 1.5rem;
-    min-height: 130px;
-  }
-
-  .search-input,
-  .header-search-input {
-    font-size: 16px;
-    min-height: var(--input-min-height);
-  }
-
-  .option-btn {
-    padding: 0.625rem 1rem;
-    min-height: 44px;
-  }
 }

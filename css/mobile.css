@@ -1,0 +1,395 @@
+/**
+ * モバイル・横スクロール防止
+ * Safari / iPhone 向けのオーバーフロー対策
+ */
+
+/* ── 全ページ共通: 幅制約 ── */
+#site-header,
+#site-footer,
+.site-header,
+.site-main,
+.container,
+.header-inner,
+.header-search-wrap,
+.search-box,
+.hero,
+.tool-page,
+.tool-panel,
+.tool-page-extras,
+.featured-section,
+.category-section,
+.ad-slot,
+.ad-header-below,
+.ad-footer-above,
+.form-group,
+.form-row,
+.result-box,
+.result-grid,
+.qr-output,
+.qr-canvas-wrap,
+.seo-article,
+.faq-section,
+.tools-grid {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* flex/grid 子要素の縮小を許可（Safari） */
+.site-logo,
+.header-actions,
+.site-nav,
+.category-header,
+.char-counter,
+.char-stats,
+.tab-group,
+.option-group,
+.qr-actions,
+.breadcrumb-list {
+  min-width: 0;
+}
+
+/* ── フォーム要素 ── */
+input,
+select,
+textarea,
+button,
+.btn,
+.search-input,
+.header-search-input,
+.form-input,
+.form-select,
+.form-textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='number'],
+input[type='search'] {
+  width: 100%;
+  min-width: 0;
+}
+
+.form-row {
+  width: 100%;
+}
+
+.ad-header-below,
+.ad-footer-above {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.ad-footer-above.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ── 広告プレースホルダー ── */
+.ad-slot,
+.ad-placeholder {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ad-placeholder {
+  padding: 1.5rem 1rem;
+}
+
+/* ── カード・ツール本体 ── */
+.tool-page {
+  width: 100%;
+}
+
+.tool-panel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tool-card {
+  width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.tool-card-title,
+.tool-card-desc {
+  overflow-wrap: break-word;
+}
+
+/* ── 検索ボックス ── */
+.search-box {
+  width: 100%;
+}
+
+/* ── QRコード ── */
+.qr-output {
+  width: 100%;
+}
+
+.qr-canvas-wrap {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.qr-canvas-wrap canvas,
+.qr-canvas-wrap img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* ── 結果・テキスト ── */
+.result-value {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.output-text {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.result-item-value {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ── タブ・オプション ── */
+.tab-group {
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.option-group {
+  width: 100%;
+}
+
+.option-btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+}
+
+/* ── SNS文字数カウント ── */
+.char-stats {
+  flex-wrap: wrap;
+}
+
+.form-textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ── 768px以下: タブレット・スマホ ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .header-inner {
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .header-search-wrap {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .site-logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 1rem;
+  }
+
+  .logo-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-page {
+    max-width: 100%;
+  }
+
+  .tool-panel {
+    padding: 1.25rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  .search-input,
+  .header-search-input,
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px; /* iOS Safari 自動ズーム防止 */
+  }
+
+  .result-value {
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
+  }
+
+  .category-header {
+    flex-wrap: wrap;
+  }
+
+  .category-count {
+    margin-left: 0;
+  }
+
+  .seo-article,
+  .faq-section,
+  .tool-related {
+    overflow-wrap: break-word;
+  }
+
+  .faq-question {
+    padding: 0.875rem 1rem;
+    overflow-wrap: break-word;
+  }
+
+  .faq-answer {
+    padding: 0 1rem 0.875rem;
+  }
+}
+
+/* ── 480px以下: 小型スマホ ── */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.875rem;
+  }
+
+  .site-main {
+    padding: 1.25rem 0 1.75rem;
+  }
+
+  .hero {
+    padding: 1rem 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 7vw, 1.75rem);
+  }
+
+  .tool-panel {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .tool-card {
+    padding: 1.125rem;
+  }
+
+  .tool-title {
+    font-size: clamp(1.25rem, 5.5vw, 1.5rem);
+  }
+
+  .option-btn {
+    flex: 1 1 calc(50% - 0.25rem);
+    padding: 0.625rem 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-block {
+    width: 100%;
+  }
+
+  .qr-canvas-wrap {
+    max-width: 100%;
+    padding: 0.75rem;
+  }
+
+  .qr-actions {
+    width: 100%;
+  }
+
+  .qr-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .ad-placeholder {
+    padding: 1.25rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .result-box {
+    padding: 1rem;
+    padding-top: 2.75rem; /* コピーボタン分 */
+  }
+
+  .copy-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .char-stats {
+    gap: 0.5rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  .tag-list {
+    gap: 0.25rem;
+  }
+
+  .tag-item {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .section-title {
+    font-size: 1.125rem;
+  }
+
+  .breadcrumb-list {
+    font-size: 0.75rem;
+  }
+}
